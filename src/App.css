@@ -1,10 +1,11 @@
 header {
-  /* overflow: hidden; */
+  overflow: hidden;
   background: transparent;
   position: sticky;
   top: 0;
   z-index: 999;
   height: 55px;
+  background-color: rgba(0, 0, 0, 0, 0.9);
 }
 
 nav {
@@ -31,9 +32,16 @@ nav {
   font-size: 35px;
 }
 
+
+
+#project_skills {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 @media (prefers-color-scheme: dark) {
-   body {
+  body {
     background-color: #a83030;
     color: #fff;
-   }
+  }
 }
