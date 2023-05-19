@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.34aa4df6.css",
+    "main.js": "/portfolio/static/js/main.0f7f7d30.js",
+    "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/myImage.jpg": "/portfolio/static/media/myImage.ebf151749a98ed72f7fb.jpg",
+    "static/media/resume.pdf": "/portfolio/static/media/resume.a68a7d28326fb6ff668d.pdf",
+    "static/media/leafdark.png": "/portfolio/static/media/leafdark.f00dc1b2c35f608fa4e6.png",
+    "static/media/controller.png": "/portfolio/static/media/controller.f04961ac922a33991fe1.png",
+    "static/media/leaf.png": "/portfolio/static/media/leaf.4d3f302832600670962b.png",
+    "static/media/airportdark.png": "/portfolio/static/media/airportdark.93d24c84af3065b1a5c7.png",
+    "static/media/controllerdark.png": "/portfolio/static/media/controllerdark.d6f24c7fe9247d46e219.png",
+    "static/media/lockdark.png": "/portfolio/static/media/lockdark.2851c64952f54bfdcc76.png",
+    "static/media/airport.png": "/portfolio/static/media/airport.f0c17af33c4b3af8b46c.png",
+    "static/media/logo.svg": "/portfolio/static/media/logo.6ce24c58023cc2f8fd88.svg",
+    "static/media/github.svg": "/portfolio/static/media/github.b6a94fc1e8df50ac1b1d.svg",
+    "index.html": "/portfolio/index.html",
+    "main.34aa4df6.css.map": "/portfolio/static/css/main.34aa4df6.css.map",
+    "main.0f7f7d30.js.map": "/portfolio/static/js/main.0f7f7d30.js.map",
+    "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.34aa4df6.css",
+    "static/js/main.0f7f7d30.js"
+  ]
+}
