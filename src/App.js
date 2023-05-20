@@ -203,7 +203,7 @@ function ProjectSection() {
                   and C++ code conventions.
                 </li>
                 <li className="pb-2" id="project_skills">
-                  Skills: C++, Data Structures
+                  Skills: C++, Data Structures 
                 </li>
               </ul>
             </div>
