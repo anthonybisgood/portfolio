@@ -191,7 +191,7 @@ function ProjectSection() {
         </a>
         <a
           className=" height-50  hover:opacity-50 mt-10"
-          href="https://github.com/CSC335-Fall2021/csc-335-autobattler-autobattler-adjz"
+          href="https://github.com/anthonybisgood/Game-of-Life"
           target="_blank"
         >
           <div className="grid grid-cols-2 place-items-center justify-center max-w-xlg">
