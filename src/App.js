@@ -243,6 +243,9 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-900 dark:bg-white dark:text-slate-900 text-white">
+      <head>
+        <title>Anthony Bisgood</title>
+      </head>
       <header className="pt-3 mx-4 font-century_gothic">
         <link
           rel="stylesheet"
@@ -252,7 +255,9 @@ function App() {
           <button
             className="header-container-item"
             id="landing"
-            onClick={() => window.scrollTo({top:0, left:0, behavior: 'smooth'})}
+            onClick={() =>
+              window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+            }
           >
             Home
           </button>
