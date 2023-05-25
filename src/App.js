@@ -61,7 +61,7 @@ function MediaIcons() {
 
 function AboutSection() {
   return (
-    <div>
+    <div className="mt-32">
       <h1 className="flex text-5xl justify-center divide-x-4">About</h1>
       <hr className="my-4 w-1/2 mx-auto h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
       <div className="grid grid-rows-1 grid-flow-col place-items-center justify-center">
@@ -69,7 +69,7 @@ function AboutSection() {
           <img
             src={require("./Images/myImage.jpg")}
             alt="A picture of me"
-            className="object-fill h-72 min-h-64 rounded-full "
+            className="object-fill h-72 min-h-72 rounded-full"
           />
         </div>
         <div className="col-span-2 row-span-1 pl-14 max-w-lg text-lg">
