@@ -315,7 +315,7 @@ function App() {
       </div>
       <footer>
         <div className="flex justify-center">
-          Made with ❤️ by Anthony Bisgood © 2023
+          Made with ❤️ by Anthony Bisgood ©2023
         </div>
       </footer>
     </div>
