@@ -3,7 +3,17 @@ import Switcher from "./Components/Switcher";
 import RotatingText from "./Components/RotatingText";
 import { useRef } from "react";
 import resume from "./resume.pdf";
+import {
+  Chart as ChartJs,
+  BarElement,
+  CategoryScale,
+  LinearScale,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { Bar } from "react-chartjs-2";
 import "./App.css";
+ChartJs.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 function doClick(ref) {
   var element = document.getElementById(ref.current.id);
@@ -51,10 +61,75 @@ function MediaIcons() {
       <a
         target="_blank"
         href={resume}
-        className="hover:opacity-50 hover:text-cyan-300 hover:dark:text-cyan-500"
+        className="hover:opacity-50 hover:text-cyan-300  hover:dark:text-cyan-500"
       >
         <i class="fa fa-file"></i>
       </a>
+    </div>
+  );
+}
+function Graph(data, options) {
+  return (
+    <div>
+      <Bar data={data} options={options} height={300}></Bar>
+    </div>
+  );
+}
+
+function BackgroundSection() {
+  let color = "#111827";
+  let data = {
+    labels: ["Java", "Python", "C++", "C", "JavaScript", "HTML/CSS", "SQL"],
+    datasets: [
+      {
+        label: "Level",
+        data: [9, 9, 7, 6, 5, 5, 4],
+        backgroundColor: color,
+        fill: false,
+        barThickness: 30,
+      },
+    ],
+  };
+  let options = {
+    maintainAspectRatio: false,
+    indexAxis: "y",
+    elements: {
+      bar: {
+        borderWidth: 2,
+      },
+    },
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "top",
+      },
+      title: {
+        display: true,
+      },
+    },
+    scales: {
+      x: {
+        max: 10,
+        grid: {
+          color: "#111827",
+          drawOnChartArea: true,
+        }
+      },
+      y: {
+        grid: {
+          display: false,
+        },
+      },
+    },
+  };
+  return (
+    <div>
+      <div id="Languages" className="grid grid-cols-2 grid-flow-row">
+        <div>
+          <Bar data={data} options={options} height={300}></Bar>
+          {/* <Graph data={data} options={options}></Graph> */}
+        </div>
+      </div>
     </div>
   );
 }
@@ -62,16 +137,17 @@ function MediaIcons() {
 function AboutSection() {
   return (
     <div>
-      <h1 className="flex text-5xl justify-center pb-4">About</h1>
+      <h1 className="flex text-5xl justify-center divide-x-4">About</h1>
+      <hr className="my-4 w-1/2 mx-auto h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
       <div className="grid grid-rows-1 grid-flow-col place-items-center justify-center">
         <div className="col-span-1 row-span-1">
           <img
             src={require("./Images/myImage.jpg")}
             alt="A picture of me"
-            className="object-fill h-64 min-h-64 rounded-full "
+            className="object-fill h-72 min-h-64 rounded-full "
           />
         </div>
-        <div className="col-span-2 row-span-1 pl-14 max-w-lg text-base">
+        <div className="col-span-2 row-span-1 pl-14 max-w-lg text-lg">
           <p className="pb-4">
             I am a student attending the University of Arizona, pursuing a
             degree in Computer Science and a minor in Buisness Administration.
@@ -87,6 +163,7 @@ function AboutSection() {
     </div>
   );
 }
+
 function ProjectImage(imageName) {
   imageName = imageName.imageName;
   let path = "./Images/" + imageName + ".png";
@@ -110,10 +187,12 @@ function ProjectImage(imageName) {
     </div>
   );
 }
+
 function ProjectSection() {
   return (
     <div className="justify-center mt-96">
       <h2 className="flex text-5xl justify-center">My Projects</h2>
+      <hr className="my-4 w-1/2 mx-auto h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
       <div className="grid mt-10 place-items-center text-md" id="projects">
         <a
           className=" height-50  hover:opacity-50"
@@ -203,7 +282,7 @@ function ProjectSection() {
                   and C++ code conventions.
                 </li>
                 <li className="pb-2" id="project_skills">
-                  Skills: C++, Data Structures 
+                  Skills: C++, Data Structures
                 </li>
               </ul>
             </div>
@@ -217,6 +296,7 @@ function ContactSection() {
   return (
     <div className="justify-center pb-64 mt-64">
       <h1 className="flex text-5xl justify-center pb-4">Contact</h1>
+      <hr className="my-4 w-1/2 mx-auto h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
       <div>
         <p className="flex justify-center">
           Feel free to contact me at:
@@ -240,7 +320,6 @@ function App() {
   const aboutButton = useRef(null);
   const projectsButton = useRef(null);
   const ContactButton = useRef(null);
-
   return (
     <div className="min-h-screen bg-gray-900 dark:bg-white dark:text-slate-900 text-white">
       <head>
@@ -300,8 +379,12 @@ function App() {
           <MediaIcons />
         </div>
       </div>
+
       <div ref={aboutButton} id="About Section">
         <AboutSection />
+      </div>
+      <div>
+        <BackgroundSection />
       </div>
       <div ref={projectsButton} id="Projects Section">
         <ProjectSection />
