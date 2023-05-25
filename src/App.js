@@ -62,16 +62,17 @@ function MediaIcons() {
 function AboutSection() {
   return (
     <div>
-      <h1 className="flex text-5xl justify-center pb-4">About</h1>
+      <h1 className="flex text-5xl justify-center divide-x-4">About</h1>
+      <hr className="my-4 w-1/2 mx-auto h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
       <div className="grid grid-rows-1 grid-flow-col place-items-center justify-center">
         <div className="col-span-1 row-span-1">
           <img
             src={require("./Images/myImage.jpg")}
             alt="A picture of me"
-            className="object-fill h-64 min-h-64 rounded-full "
+            className="object-fill h-72 min-h-64 rounded-full "
           />
         </div>
-        <div className="col-span-2 row-span-1 pl-14 max-w-lg text-base">
+        <div className="col-span-2 row-span-1 pl-14 max-w-lg text-lg">
           <p className="pb-4">
             I am a student attending the University of Arizona, pursuing a
             degree in Computer Science and a minor in Buisness Administration.
@@ -114,6 +115,8 @@ function ProjectSection() {
   return (
     <div className="justify-center mt-96">
       <h2 className="flex text-5xl justify-center">My Projects</h2>
+      <hr className="my-4 w-1/2 mx-auto h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
+
       <div className="grid mt-10 place-items-center text-md" id="projects">
         <a
           className=" height-50  hover:opacity-50"
@@ -203,7 +206,7 @@ function ProjectSection() {
                   and C++ code conventions.
                 </li>
                 <li className="pb-2" id="project_skills">
-                  Skills: C++, Data Structures 
+                  Skills: C++, Data Structures
                 </li>
               </ul>
             </div>
@@ -217,6 +220,7 @@ function ContactSection() {
   return (
     <div className="justify-center pb-64 mt-64">
       <h1 className="flex text-5xl justify-center pb-4">Contact</h1>
+      <hr className="my-4 w-1/2 mx-auto h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
       <div>
         <p className="flex justify-center">
           Feel free to contact me at:

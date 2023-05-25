@@ -1,7 +1,6 @@
 header {
   overflow: hidden;
   background: transparent;
-  position: sticky;
   top: 0;
   z-index: 999;
   height: 55px;
@@ -31,8 +30,6 @@ nav {
   color: #30b5dd;
   font-size: 35px;
 }
-
-
 
 #project_skills {
   font-weight: 600;
