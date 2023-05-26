@@ -1,8 +1,11 @@
 import React from "react";
 import Switcher from "./Components/Switcher";
 import RotatingText from "./Components/RotatingText";
+import LanguageGraph from "./Components/LanguageGraph";
+import ProficiencyGraph from "./Components/ProficiencyGraph";
 import { useRef } from "react";
 import resume from "./resume.pdf";
+
 import "./App.css";
 
 function doClick(ref) {
@@ -51,7 +54,7 @@ function MediaIcons() {
       <a
         target="_blank"
         href={resume}
-        className="hover:opacity-50 hover:text-cyan-300 hover:dark:text-cyan-500"
+        className="hover:opacity-50 hover:text-cyan-300  hover:dark:text-cyan-500"
       >
         <i class="fa fa-file"></i>
       </a>
@@ -61,7 +64,7 @@ function MediaIcons() {
 
 function AboutSection() {
   return (
-    <div className="mt-32">
+    <div className="mt-52">
       <h1 className="flex text-5xl justify-center divide-x-4">About</h1>
       <hr className="my-4 w-1/2 mx-auto h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
       <div className="grid grid-rows-1 grid-flow-col place-items-center justify-center">
@@ -74,13 +77,31 @@ function AboutSection() {
         </div>
         <div className="col-span-2 row-span-1 pl-14 max-w-lg text-lg">
           <p className="pb-4">
-            I am a student attending the University of Arizona, pursuing a
-            degree in Computer Science and a minor in Buisness Administration.
+            I am a student attending the{" "}
+            <span className="text-cyan-300 dark:text-cyan-500">
+              University of Arizona
+            </span>
+            , pursuing a degree in{" "}
+            <span className="text-cyan-300 dark:text-cyan-500">
+              Computer Science
+            </span>{" "}
+            and a minor in Buisness Administration.
           </p>
           <p className="pb-4">
-            My main interests are in cloud computing, database design, and
-            computer security. I also enjoy working on projects that involve
-            blockchain technology.
+            My main interests are in{" "}
+            <span className="text-cyan-300 dark:text-cyan-500">
+              cloud computing
+            </span>
+            ,{" "}
+            <span className="text-cyan-300 dark:text-cyan-500">
+              database design
+            </span>
+            , and{" "}
+            <span className="text-cyan-300 dark:text-cyan-500">
+              computer security
+            </span>
+            . I also enjoy working on projects that involve blockchain
+            technology.
           </p>
           <p>I also love to hike, read sci-fi novels, and test new recipes.</p>
         </div>
@@ -88,6 +109,39 @@ function AboutSection() {
     </div>
   );
 }
+
+function BackgroundSection() {
+  return (
+    <div className="mt-72">
+      <h4 className="text-center mx-auto text-5xl pb-4">Background</h4>
+      <hr className="my-4 w-1/2 mx-auto h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
+      <div className="grid grid-cols-2">
+        <div className="text-center">
+          <h5 className="mx-auto text-2xl">Programming Proficiency</h5>
+          <p className="px-10 my-4 text-md">
+            Working with a variety of languages and frameworks has given me a
+            lot of experience in programming. I have worked with the following
+            languages and frameworks to create a variety of projects.
+          </p>
+        </div>
+        <div className="text-center">
+          <h6 className="mx-auto text-2xl">Frameworks and Concepts</h6>
+          <p className="px-10 my-4 text-md">
+            Below are some programming concepts and frameworks that I've gained
+            experience with both in and out of the classroom.
+          </p>
+        </div>
+        <div>
+          <ProficiencyGraph />
+        </div>
+        <div>
+          <LanguageGraph />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function ProjectImage(imageName) {
   imageName = imageName.imageName;
   let path = "./Images/" + imageName + ".png";
@@ -111,12 +165,12 @@ function ProjectImage(imageName) {
     </div>
   );
 }
+
 function ProjectSection() {
   return (
-    <div className="justify-center mt-96">
+    <div className="justify-center mt-72">
       <h2 className="flex text-5xl justify-center">My Projects</h2>
       <hr className="my-4 w-1/2 mx-auto h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
-
       <div className="grid mt-10 place-items-center text-md" id="projects">
         <a
           className=" height-50  hover:opacity-50"
@@ -218,7 +272,7 @@ function ProjectSection() {
 }
 function ContactSection() {
   return (
-    <div className="justify-center pb-64 mt-64">
+    <div className="justify-center pb-32 mt-64">
       <h1 className="flex text-5xl justify-center pb-4">Contact</h1>
       <hr className="my-4 w-1/2 mx-auto h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
       <div>
@@ -244,7 +298,6 @@ function App() {
   const aboutButton = useRef(null);
   const projectsButton = useRef(null);
   const ContactButton = useRef(null);
-
   return (
     <div className="min-h-screen bg-gray-900 dark:bg-white dark:text-slate-900 text-white">
       <head>
@@ -304,8 +357,12 @@ function App() {
           <MediaIcons />
         </div>
       </div>
+
       <div ref={aboutButton} id="About Section">
         <AboutSection />
+      </div>
+      <div>
+        <BackgroundSection />
       </div>
       <div ref={projectsButton} id="Projects Section">
         <ProjectSection />
