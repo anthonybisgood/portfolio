@@ -119,9 +119,8 @@ function BackgroundSection() {
         <div className="text-center">
           <h5 className="mx-auto text-2xl">Programming Proficiency</h5>
           <p className="px-10 my-4 text-md">
-            Working with a variety of languages and frameworks has given me a
-            lot of experience in programming. I have worked with the following
-            languages and frameworks to create a variety of projects.
+            I have worked with the following languages and frameworks to create
+            a variety of projects.
           </p>
         </div>
         <div className="text-center">
@@ -131,10 +130,10 @@ function BackgroundSection() {
             experience with both in and out of the classroom.
           </p>
         </div>
-        <div>
+        <div className="ml-[5%]">
           <ProficiencyGraph />
         </div>
-        <div>
+        <div className="mr-[5%]">
           <LanguageGraph />
         </div>
       </div>
