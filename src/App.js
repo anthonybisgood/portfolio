@@ -26,35 +26,35 @@ function MediaIcons() {
       <a
         target="_blank"
         href="https://github.com/anthonybisgood"
-        className="hover:opacity-50 hover:text-cyan-300 hover:dark:text-cyan-500"
+        className="hover:opacity-50 hover:text-cyan-300 hover:dark:text-cyan-500" rel="noreferrer"
       >
         <i class="fa fa-github"></i>
       </a>
       <a
         target="_blank"
         href="https://www.linkedin.com/in/anthony-bisgood-b028a4194/"
-        className="hover:opacity-50 hover:text-cyan-300 hover:dark:text-cyan-500"
+        className="hover:opacity-50 hover:text-cyan-300 hover:dark:text-cyan-500" rel="noreferrer"
       >
         <i class="fa fa-linkedin"></i>
       </a>
       <a
         target="_blank"
         href="https://twitter.com/AnthonyBisgood"
-        className="hover:opacity-50 hover:text-cyan-300 hover:dark:text-cyan-500"
+        className="hover:opacity-50 hover:text-cyan-300 hover:dark:text-cyan-500" rel="noreferrer"
       >
         <i class="fa fa-twitter"></i>
       </a>
       <a
         target="_blank"
         href="https://www.instagram.com/Anthony_Bisgood/"
-        className="hover:opacity-50 hover:text-cyan-300 hover:dark:text-cyan-500"
+        className="hover:opacity-50 hover:text-cyan-300 hover:dark:text-cyan-500" rel="noreferrer"
       >
         <i class="fa fa-instagram"></i>
       </a>
       <a
         target="_blank"
         href={resume}
-        className="hover:opacity-50 hover:text-cyan-300  hover:dark:text-cyan-500"
+        className="hover:opacity-50 hover:text-cyan-300  hover:dark:text-cyan-500" rel="noreferrer"
       >
         <i class="fa fa-file"></i>
       </a>
@@ -71,7 +71,7 @@ function AboutSection() {
         <div className="col-span-1 row-span-1">
           <img
             src={require("./Images/myImage.jpg")}
-            alt="A picture of me"
+            alt="Myself"
             className="object-fill h-72 min-h-72 rounded-full"
           />
         </div>
@@ -150,14 +150,14 @@ function ProjectImage(imageName) {
       <div className="hidden dark:block">
         <img
           src={require("" + path)}
-          alt="Picture representing an airport"
+          alt="Airport"
           className="h-32 max-h-32 border-2 border-gray-500 rounded-lg"
         ></img>
       </div>
       <div className="block dark:hidden">
         <img
           src={require("" + darkPath)}
-          alt="Picture representing an airport"
+          alt="Airport"
           className="h-32 max-h-32 border-2 border-gray-500 rounded-lg"
         ></img>
       </div>
@@ -174,7 +174,7 @@ function ProjectSection() {
         <a
           className=" height-50  hover:opacity-50"
           href="https://github.com/anthonybisgood/Airport-DBMS"
-          target="_blank"
+          target="_blank" rel="noreferrer"
         >
           <div className="grid grid-cols-2 place-items-center justify-center max-w-xlg">
             <ProjectImage imageName="airport" />
@@ -198,7 +198,7 @@ function ProjectSection() {
         <a
           className=" height-50  hover:opacity-50 mt-10"
           href="https://github.com/anthonybisgood/Quantifying-the-Emergence-of-Deepfakes"
-          target="_blank"
+          target="_blank" rel="noreferrer"
         >
           <div className="grid grid-cols-2 place-items-center justify-center max-w-xlg">
             <ProjectImage imageName="lock" />
@@ -223,7 +223,7 @@ function ProjectSection() {
         <a
           className=" height-50  hover:opacity-50 mt-10"
           href="https://github.com/CSC335-Fall2021/csc-335-autobattler-autobattler-adjz"
-          target="_blank"
+          target="_blank" rel="noreferrer"
         >
           <div className="grid grid-cols-2 place-items-center justify-center max-w-xlg">
             <ProjectImage imageName="controller" />
@@ -248,7 +248,7 @@ function ProjectSection() {
         <a
           className=" height-50  hover:opacity-50 mt-10"
           href="https://github.com/anthonybisgood/Game-of-Life"
-          target="_blank"
+          target="_blank" rel="noreferrer"
         >
           <div className="grid grid-cols-2 place-items-center justify-center max-w-xlg">
             <ProjectImage imageName="leaf" />
@@ -280,7 +280,7 @@ function ContactSection() {
           <a
             href="mailto:abisgood30@gmail.com"
             className="pl-1 hover:underline text-cyan-300 dark:text-cyan-500"
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
             abisgood30@gmail.com
           </a>
