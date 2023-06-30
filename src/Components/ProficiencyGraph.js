@@ -45,7 +45,7 @@ export default function ProficiencySection() {
         data: prof,
         backgroundColor: LightModeColor,
         fill: false,
-        barThickness: 30,
+        barThickness: 20,
       },
     ],
   };

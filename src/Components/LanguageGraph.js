@@ -23,7 +23,7 @@ export default function ProficiencySection() {
     "Data Structures",
     "Compilers",
   ];
-  let prof = [7, 4, 8, 7, 6, 9, 6];
+  let prof = [8, 6, 8, 7, 6, 9, 7];
   let DarkData = {
     labels: labels,
     datasets: [
