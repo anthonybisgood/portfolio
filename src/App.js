@@ -39,13 +39,6 @@ function MediaIcons() {
       </a>
       <a
         target="_blank"
-        href="https://twitter.com/AnthonyBisgood"
-        className="hover:opacity-50 hover:text-cyan-300 hover:dark:text-cyan-500"
-      >
-        <i class="fa fa-twitter"></i>
-      </a>
-      <a
-        target="_blank"
         href="https://www.instagram.com/Anthony_Bisgood/"
         className="hover:opacity-50 hover:text-cyan-300 hover:dark:text-cyan-500"
       >
